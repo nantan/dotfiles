@@ -3,6 +3,17 @@ filetype off
 set rtp+=~/.vim/vundle.git/ 
 call vundle#rc()
 
+"javascript
+Bundle 'JavaScript-syntax'
+Bundle 'pangloss/vim-javascript'
+
+"ruby
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-cucumber'
+
+filetype indent plugin on
+
 set ttyfast
 set iminsert=0
 set imsearch=0
@@ -10,13 +21,13 @@ set backspace=2
 set number
 set ruler
 set tabstop=2
+set shiftwidth=2
 set laststatus=2
 set cmdheight=2
 set showcmd
 set ignorecase
 "set smartindent
-set autoindent
-set ts=4 sw=3
+"set autoindent
 set softtabstop=3
 set expandtab
 set wildmenu
@@ -41,3 +52,7 @@ if has("autocmd")
   autocmd FileType perl set shiftwidth=5 softtabstop=5 tabstop=5 expandtab
   autocmd FileType ruby set shiftwidth=2 softtabstop=2 tabstop=2 expandtab
 endif
+
+autocmd FileType javascript :compiler gjslint
+autocmd QuickfixCmdPost make copen
+
