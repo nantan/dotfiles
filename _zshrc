@@ -184,6 +184,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # Python
 #source /usr/local/bin/virtualenvwrapper.sh
 #export WORKON_HOME=~/.virtualenvs
