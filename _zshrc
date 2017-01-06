@@ -175,11 +175,13 @@ esac
 # vim:set ft=zsh:
 
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
