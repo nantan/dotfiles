@@ -181,10 +181,12 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.virtualenvs
+# Python
+#source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=~/.virtualenvs
 
 # パス関係
 
