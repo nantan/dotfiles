@@ -1,0 +1,35 @@
+[user]
+	name = 
+	email = 
+[color]
+	ui = auto
+[alias]
+	br = branch
+	ci = commit -v
+	co = checkout
+	st = status -sb
+	cancel = reset --soft HEAD^
+	unstage = reset HEAD
+	last = log -1 HEAD
+	today = log --oneline --since='12 hour ago'
+	ls = log --name-status
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lga = log --graph --all --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+	autocrlf = false
+	excludesfile = ~/.gitignore_global
+	quotepath = false
+[http]
+	sslVerify = true
+[commit]
+	template = ~/.gitmessage.txt
+[credential]
+	helper = osxkeychain
+[diff]
+	tool = icdiff
+[difftool]
+	prompt = false
+[difftool "icdiff"]
+	cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+
